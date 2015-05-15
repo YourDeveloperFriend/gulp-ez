@@ -7,12 +7,13 @@ module.exports = function(options) {
   return through2.obj(function(file, enc, cb) {
     delete require.cache[file.path];
     var Controller = require(file.path);
-    if(Controller.modelName) {
+    var contents = generator(Controller, options);
+    if(contents) {
       var frontendFile = new File({
         cwd: file.cwd,
         base: file.base,
         path: file.path,
-        contents: new Buffer(generator(Controller, options))
+        contents: new Buffer(contents)
       });
       this.push(frontendFile);
     }
