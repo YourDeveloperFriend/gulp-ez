@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "ez-generator": "0.0.6",
+    "ez-generator": "0.0.7",
     "through2": "^0.6.5",
     "vinyl": "^0.4.6"
   },
