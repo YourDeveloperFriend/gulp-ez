@@ -2,3 +2,4 @@
 *.swo
 *.swp
 npm-debug.log
+/dest
